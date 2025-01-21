@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: black;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin: 2rem 0;
+  display: none;
+  /* ⬆ this is to hide all the 'sections' by default...so that they aren't all visible at the same time! */
+}
+
+section:target {
+  /* ⬆ this was something new i have learnt for the assignment...never dealt with target before, quite interesting!! */
+  display: block;
+  /* ⬆ this shows only the section triggered by its corresponding link :) */
+}
+
+section img {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex: 0;
+  border-radius: 10px;
+}
+
+section p {
+  /* width: 50%; */
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+a {
+  color: darkgreen;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* lines 71-73 block was also something new and really interesting to learn. never knew i could do that! */
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section img {
+    max-width: 100%;
+  }
+}
